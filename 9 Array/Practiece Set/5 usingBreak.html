@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Break-statement</title>
+</head>
+<body>
+  <h4>Create a while loop that exist after counting 5 prime numbers</h4>
+  <script>
+    function isPrime(number){
+      if(number <= 1){
+        return false; //0 or 1 not a prime nu
+      }
+      for(i = 2; i<= Math.sqrt(number); i++)
+      {
+        
+        if(number % i === 0){
+          return false //found a divisor
+        }
+        
+      }
+        
+      return true;
+      
+    }
+
+    function findFivePrimes(){
+      let count = 0; //initialize the count of prime numbers found
+      let currentNumber = 2; // start checking from 2 ( the first prime)
+      while(count <5){
+        if(isPrime(currentNumber)){
+          console.log(currentNumber);//print the prime num
+          count++;
+          break;   //break out of the loop
+        }
+        currentNumber++; //move to next num
+      }
+    }
+    //call the function to find the first five prime number 
+    findFivePrimes();
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Json
+</title>
+</head>
+<body>
+  <ol>
+    <li>What is JSON?</li>
+    <li>Not the same as Js objest but similar</li>
+    <li>Common in network calls and data storage</li>
+    <li>JSON.stringify() and JSON.parse()</li>
+    <li>Strings are easy to transport over network</li>
+    <li>JSON require double quotes. Escaped as \".</li>
+    <li>JSON is data format, JS object is data structure</li>
+  </ol>
+  <script>
+    let Product = {
+      name: 'TShirt',
+      price: 789,
+      rating: {
+        stars: 4.5,
+        noOfReiews: 453,
+      },
+    };
+    console.log(typeof(Product));
+    console.log(Product);
+    //conver the Product obj into string.
+    let str = JSON.stringify(Product);
+    //confirmation of convirsion.
+    console.log(typeof(str));
+    console.log(str);
+    //conversion from string to obj
+    let newProduct = JSON.parse(str);
+    ////confirmation of convirsion.
+    console.log(typeof newProduct);
+    console.log(newProduct);
+  </script>
+</body>
+</html>

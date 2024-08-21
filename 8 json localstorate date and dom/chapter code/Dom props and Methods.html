@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dom</title>
+    <style>
+      table{
+        border-collapse: collapse;
+      }
+      table, th, td{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Dom and Eelement Properties</th>
+        <th>Dom and Eelement Methods</th>
+      </tr>
+      <tr>
+        <td>1. location</td>
+        <td>1. getElementByID()</td>    
+      </tr>
+      <tr>
+        <td>2. title</td>
+        <td>2. querySelector()</td>    
+    </tr> 
+    <tr>
+        <td>3. href</td>
+        <td>3. classList: add(), remove()</td>    
+      </tr> 
+      <tr>
+        <td>4. domain</td>
+        <td>4. createElement()</td>    
+      </tr> 
+      <tr>
+        <td>5. innerHTML</td>
+        <td>5. appendChild()</td>    
+      </tr> 
+      <tr>
+        <td>6. innerText</td>
+        <td>6. removeChild()</td>    
+      </tr>
+      <tr>
+        <td>7. classList</td>
+        <td>7. replaceChild()</td>    
+      </tr>
+    </table>
+    <hr>
+    <div class="my-div">This is the div</div>
+      <script>
+        let button = document.createElement('Button');
+        button.innerText='Click Me'; 
+        document.querySelector('.my-div').appendChild(button);
+        document.querySelector('.my-div');
+
+      </script>
+    </body>
+</html>

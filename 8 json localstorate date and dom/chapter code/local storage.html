@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <ol>
+    <li>Persistent data <strong>storage</strong> in the browser.</li>
+    <li><strong>setItem:</strong> Stores data as key-value pairs</li>
+    <li><strong>only strings</strong> can be stored</li>
+    <li><strong>getItem:</strong> Retrieves data based on key</li>
+    <li><strong>other Methods :</strong>localStorage.clear(), removeItem() </li>
+    <li>Do not store sensitive information. Viewable in storage console.</li>
+  </ol>
+  <script>
+  let product = {
+    name: 'TShirt',
+    price: 789,
+    rating:{
+      stars: 4.5,
+      noOfReviews: 453,
+    },
+  };
+    // localStorage.setItem('Name', 'Raju Ozarkar');
+    // localStorage.setItem('Native', 'Maharashtra');
+    // console.log(localStorage.getItem('Native'));
+  //object conberted to string below
+    // localStorage.setItem('product',JSON.stringify(product));
+    // console.log(localStorage.getItem('product'));
+    // let product2 = JSON.parse(localStorage.getItem('product'));
+    // console.log(product2)
+
+  //removes single item
+    // localStorage.removeItem('Name');  
+    
+  //all clear
+    localStorage.clear();
+
+
+
+
+  </script>
+</body>
+</html>

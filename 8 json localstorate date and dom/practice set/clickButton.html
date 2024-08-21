@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Exercise</title>
+    <style>
+      #my-button{
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+      }
+      .js-odd{
+        background-color: chocolate;
+      }
+      .js-even{
+        background-color: lawngreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>how many times button pressed, color should change after evevry odd and even pressing</h4>   
+    <h3 id="greeting"></h3>
+    <button id="my-button" onclick="buttonPressed();">0</button>
+
+    <script>
+      let noOfTimesClicked = 0;
+      function buttonPressed() {
+        // console.log('pressed');
+        noOfTimesClicked++;
+        updateButton();
+      }
+      function updateButton(){
+        let button = document.querySelector('#my-button');
+        if(noOfTimesClicked % 2 === 0){
+          button.classList.remove('js-odd');
+          button.classList.add('js-even');
+        } else{
+          button.classList.remove('js-even');
+          button.classList.add('js-odd');
+        }
+        button.innerText = noOfTimesClicked;
+      }
+      updateButton();
+        
+
+
+
+  //     function doGreeting(personName){
+  //       let myDate = new Date();
+  //       let hours = myDate.getHours();
+  //       let heading = document.querySelector('#greeting');
+
+  //       if(hours > 5 && hours < 12)
+  //     {
+  //       heading.innerText= `Good Morning :${personName}`;
+  //       // console.log('Good Morning');
+  //     }else if(hours >= 12 && hours < 18)
+  //     {
+  //       heading.innerText= `Good Afternoon :${personName}`;
+  //       // console.log('Good Afternoon');
+  //     } else
+  //     {
+  //       heading.innerText= `Good Night :${personName}`;
+  //       // console.log('Good evening');
+  //     }
+  // }
+  // doGreeting('Raju');   //function call / method
+    </script>
+  </body>
+</html>

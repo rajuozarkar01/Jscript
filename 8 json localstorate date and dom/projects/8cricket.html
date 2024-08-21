@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="cricket.css">
+</head>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  
+  <button class="choice-button" onclick="  let computerChoice = generateComputerChoice();
+    let resultMsg = getResult('Bat', computerChoice);
+    showResult('Bat', computerChoice, resultMsg);
+    // alert(`You have choosen Bat ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`); ">
+    <img src="bat.png" alt="Bat Image" class="choice-image">
+  </button>
+  
+  <button class="choice-button"  onclick="  computerChoice= generateComputerChoice();
+    resultMsg = getResult('Ball', computerChoice);
+    showResult('Ball', computerChoice, resultMsg);
+    //  alert(`You have choosen Ball ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`);">
+    <img src="ball.png" alt="Bat Image" class="choice-image">
+  </button>
+
+  <button class="choice-button" onclick=" computerChoice= generateComputerChoice();
+    resultMsg = getResult('Stump', computerChoice);
+    showResult('Stump', computerChoice, resultMsg);
+    // alert(`You have choosen Stump ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`); ">
+    <img src="stump.png" alt="Bat Image" class="choice-image">
+  </button>
+    
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="scor"></h3>
+
+  <button class="reset-button" onclick="localStorage.clear()
+    resetScore(); ">
+  <img src="reset.png" alt="Bat Image" class="reset-image "></button>
+
+  <script>
+    let scoreStr = localStorage.getItem('Score');
+    let score;
+    resetScore(scoreStr);    
+
+    function resetScore(scoreStr){
+      score = scoreStr ? JSON.parse(scoreStr) : {
+      win: 0,
+      lost: 0,
+      tie: 0,
+      };
+
+      score.displayScore= function() {
+      return `Score: Won: ${score.win}, Lost: ${score.lost}, Tie's: ${score.tie}`;
+      };
+      showResult();
+    }
+   
+    function generateComputerChoice(){
+      let randomNumber = Math.random() * 3;
+      if(randomNumber > 0 && randomNumber <= 1){
+        return 'Bat';    
+        } 
+      else if (randomNumber > 1 && randomNumber <= 2){ 
+        return 'Ball';}
+      else { 
+        return 'Stump';
+        // console.log('Computer Choice is Stump');
+      }
+      return choice;
+    }
+
+    function getResult( userMove, computerMove){
+
+      if(userMove ==='Bat')
+      {
+        if(computerMove === 'Ball'){ 
+          score.win++;
+          return 'User Won !'; }
+        else if(computerMove === 'Stump'){ 
+          score.lost++;
+          return 'Computer Won !' }
+        else if(computerMove === 'Bat' ){  
+          score.tie++;
+          return `It's a tie !`   } 
+      }
+
+        else if (userMove === 'Ball')
+        {
+          if(computerMove === 'Ball'){ 
+            score.tie++;
+            return `It's a tie !`; }
+          else if(computerMove === 'Stump'){ 
+            score.win++;
+            return  'User Won !';}
+          else if(computerMove === 'Bat' ){  
+            score.lost++;
+            return  'Computer Won !';  }     
+        } 
+
+          else if(userMove === 'Stump')
+          {
+            if(computerMove === 'Ball'){ 
+              score.lost++;
+              return 'Computer Won !'; }
+            else if(computerChoice === 'Stump'){ 
+              score.tie++;
+              return `It's a tie !`; }
+            else if(computerChoice === 'Bat' ){  
+              score.win++;
+              return  'User Won !';  }
+          }
+    }
+    
+    function showResult(userMove, computerMove, result)     
+    {    
+      localStorage.setItem('Score',JSON.stringify(score));
+      document.querySelector('#user-move').innerText = 
+      userMove !== undefined ?`You have choosen: ${userMove}`: '';
+
+      document.querySelector('#computer-move').innerText =
+      computerMove !== undefined ? `Computer choice is: ${computerMove}`:'';
+
+      document.querySelector('#result').innerText =
+      result !== undefined ? result : '';
+      document.querySelector('#scor').innerText = score.displayScore();
+      
+
+      // alert(`You have choosen: ${userMove}!, 
+      // Computer choice is: ${computerMove}, 
+      // and  result is :  ${result}
+      // ${score.displayScore()}`);
+      // // Object properties accessed above to display updated score
+    }
+  </script>
+  <!-- inside object section  
+  <h4>Whenever there is function inside object called Method of that object</h4> -->
+</body>
+</html>

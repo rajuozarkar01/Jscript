@@ -1,0 +1,71 @@
+<!-- Practice Exercise > if-else & Boolean
+Give fthe discound on age, gender for metro ticket
+females get 50% off
+Kids under 5 years age are free
+kids up to 8 years have half ticket
+People over 65 years of age only pay 30% of the ticket
+-In case multiple discounts max discount will apply -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let age = 65;
+    let gender = 'female'; //male and female'
+    let finalDiscount = 0;
+    let ticketPrice = 90;
+
+    if(age <= 5){
+      finalDiscount = ticketPrice - (100/100*90);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log(' FREE Tickets for kids below 5 years !');
+    }
+    else if(age > 5 && age <=8){
+      finalDiscount = ticketPrice -(50/100*90);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log(' 50% off on Tickets for kids below 8 years!');
+    }
+    else if (age > 8 && age <65 && gender === 'female'){
+      finalDiscount = ticketPrice -(50/100*90);
+      console.log(finalDiscount);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log('50% off on Tickets for Females!')      
+    } 
+    else if(age =>65 && gender === 'female')
+    { 
+      finalDiscount = ticketPrice -(80/100*90);;
+      console.log(finalDiscount);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log('Senior Citizen Female 80% Disc on Ticket');
+
+    }
+    else if(age > 65)
+    {
+      finalDiscount = ticketPrice -(30/100*90);
+      console.log(finalDiscount);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log('Senior Citizen 30% Disc on Ticket');
+
+    } else
+    {
+      finalDiscount = ticketPrice-(0/100*90);
+      console.log(finalDiscount);
+      console.log(`Your paid amount for Ticket is: ${finalDiscount} and Ticket price is: ${ticketPrice}`);
+      console.log('Sorry No Discount offer for you! pay 100% on tickets');
+    }
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+/* The best way to add 3D effects to buttons with CSS is by using the box-shadow, transform, and perspective properties. We use box-shadow to create a subtle shadow effect.
+The transform: translateY(-2px) property lifts the button slightly when hovered, creating a 3D effect. */
+body{
+  text-align: center;
+}
+
+.choice-button{
+  height: 100px;
+  width: 100px;
+  border: none;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: yellow;
+  cursor: pointer;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+.choice-button:hover{
+  transform: translateY(-2px);
+}
+.choice-image{
+  height: 85px;
+  
+}
+
+.reset-image
+{
+  height: 50px;
+}
+.reset-button{
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 40%;
+  background-color: tomato;
+  cursor: pointer;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+.reset-button:hover{
+  transform: translateY(10%);
+}

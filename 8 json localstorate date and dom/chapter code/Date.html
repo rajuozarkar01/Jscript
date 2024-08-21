@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Date(object)</title>
+</head>
+<body>
+  <h1>Date(object)</h1>
+  <ul>
+    <li><strong>new Date()</strong> Creates a new Date object with current date and time.</li>
+    <li>Key Methods :</li>
+  </ul>
+  <ol>
+    <li><strong>getTime():</strong>Milliseconds since Epoch</li>
+    <li><strong>getFullYear():</strong>4-digit year</li>
+    <li><strong>getDay():</strong>Day of the week</li>
+    <li><strong>getMinutes():</strong>Current minut</li>
+    <li><strong>geHours():</strong>current Hour</li>
+  </ol>
+  <ul><li>Crucial for<strong> timestamps, sheduling,</strong>etc
+    </li>
+  </ul>
+  <script>
+    let myDate = new Date();
+    // Time is always stored in milisecond from 1971 check Ans
+    console.log(myDate.getTime());
+    console.log(myDate.getFullYear());
+    console.log(myDate.getDay());
+    console.log(myDate.getMinutes());
+    console.log(myDate.getHours());
+    console.log(myDate.getMonth());
+    console.log(myDate);
+    
+  </script>
+</body>
+</html>

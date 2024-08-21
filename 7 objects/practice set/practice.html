@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>object myntra</title>
+  </head>
+  <body>
+  <script>
+      //1.....? create object to reprsent product from myntra
+    // let x = {
+    //   company: 'Mango',
+    //   product: 'Shirt',
+    //   price: 897
+    // };
+    // let b = x;
+    // console.log(x.company);
+    // console.log(x.product);
+    // console.log(x.price);
+    // console.log(b);
+      //2....?Create an Object with two references and log changes to one object by  changing the other one
+    // let x = {  product: 'company' };
+    // console.log(x);
+    // let  y = {
+    //   product: 'company',
+    //   distroy: 'target',
+    //   attack: 'inDark', };
+
+    // x = y;     //x has reference(address) only not value , prove it;
+    // console.log(y);
+    // console.log(x);   
+    // console.log(y == x);
+      //3....? User bracket notation to display delivery-time.
+    // let myntra = {
+    //   productID: 1440,
+    //   dileveryBoyID: 1001,
+    //   itemCode: 106,
+    //   deliveryTime: '9:00 PM', }
+
+    // console.log(myntra['deliveryTime']);
+      //4.....? Given an object{message:'good job', status: 'complete'},
+      //  use de-structuring to create two variables message and status
+    // let x = { message:'good job',
+    //          status:'complete',  };
+  
+    //   let{message, status} = x;
+    //   console.log(message);
+    //   console.log(status);
+      //5.....? Add isIndenticalProduct function to compare two products object
+
+    let product1 = {
+      name: 'Jeans',
+      size: 'S',
+      fit: 'Slim Fit',
+      'delivery -time': 'Same day delivery',
+    };
+    function isIndenticalProduct(product1, product2)
+      {
+        if((typeof(product1)) !== 'object' || (typeof (product2)) !== 'object'){
+        console.warn('Parameter passsed was not an object');
+        return false;
+      }
+
+    if(product1 == product2){return true; }
+
+    if(product1.name === product2.name && product1.size === product2.size && product1.fit === product2.fit){
+      return true;
+      }
+      else
+      { return false; }
+    }
+
+    let product2 = {
+      name: 'Jeans',
+      size: 'M',
+      fit: 'Slim Fit',
+      'delivery -time': 'Same day delivery',  };
+
+    let product3 = {
+      name: 'Jeans',
+      size: 'M',
+      fit: 'Slim Fit',
+      'delivery -time': 'Same day delivery',  };    
+    
+    console.log(isIndenticalProduct(product1, ''));
+    console.log(isIndenticalProduct(product3, product2));
+    console.log(isIndenticalProduct(product2, product3));
+    console.log(isIndenticalProduct(product3, product1));
+  </script>
+
+  </body>
+</html>

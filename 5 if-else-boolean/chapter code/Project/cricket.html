@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="  generateComputerChoice(); //const userChioceMsg = '';
+  /* This will generate Random number between 0 and 3 */
+  
+
+  const ComputerchoiceMsg = (`Computer Choice is ${computerChoice}`);
+  let resultMsg;
+    if (computerChoice === 'Ball' ){
+      resultMsg ='User won !';
+    } else if( computerChoice === 'Bat'){   
+      resultMsg = 'Match Ties between User & Computer';
+    } else{
+      resultMsg = 'Computer won !';
+    }
+  
+  alert(`You have choosen Bat ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`);
+  ">Bat</button>
+  
+  
+  <button  onclick=" generateComputerChoice();
+   ComputerchoiceMsg = (`Computer Choice is ${computerChoice}`);
+  //  resultMsg;
+    if (computerChoice === 'Ball' ){
+      resultMsg ='Match Ties between User & Computer';
+    } else if( computerChoice === 'Bat'){   
+      resultMsg = 'Computer won !';
+    } else{
+      resultMsg = 'User won !';
+    }
+  
+  alert(`You have choosen Ball ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`);
+  ">Ball</button>
+
+  <button onclick=" generateComputerChoice();
+  /* This will generate Random number between 0 and 3 */
+   
+   ComputerchoiceMsg = (`Computer Choice is ${computerChoice}`);
+  //  resultMsg;
+  if (computerChoice === 'Ball' ){
+    resultMsg ='Computer won !';
+  } else if( computerChoice === 'Bat'){   
+    resultMsg = 'User won !';
+  } else{
+    resultMsg = 'Match Ties between User & Computer';
+  }
+  
+  alert(`You have choosen Stump ! Computer choice is  ${computerChoice} and  result is :  ${resultMsg}`);
+  ">Stump</button>
+  <script>
+    let computerChoice;
+    function generateComputerChoice(){
+      let randomNumber = Math.random() * 3;
+  if(randomNumber > 0 && randomNumber <= 1){
+     computerChoice = 'Bat';
+    // console.log('Computer Choice is Bat');
+  } 
+  else if (randomNumber > 1 && randomNumber <= 2)
+  {
+    computerChoice = 'Ball';
+    // console.log('Computer Choice is Ball');
+  }
+  else{
+    computerChoice = 'Stump';
+    // console.log('Computer Choice is Stump');
+  }
+    }
+
+  </script>
+</body>
+</html>
