@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="todo.css">
-  <title>TO DO</title>
+  <title>TO DO App</title>
 </head>
 <body>
   <h1 id="main-heading">Todo App</h1>
 
+  <div class="grid-container" >
   <input id="todo-input" type="text" placeholder="Enter Todo here">
-  <button onclick="addTodo();">Add</button>
-  <script src="todo.js">
+  <input id="todo-date" type="date">
+  <button class="button-shadow green-back" onclick="addTodo();">Add</button>
+  </div>
 
-  </script>
+  <!-- <p id="todoItems"></p> -->
+  <div class="todo-container grid-container"></div>
+  
+  <script src="todo.js"></script>
 </body>
 </html>
