@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advabced Functions</title>
+</head>
+<body>
+  <script>
+    //1.. let sum =function(num1, num2){
+    //   return num1 + num2;
+    // };
+    //   // let newSum = sum;
+    //   // console.log(sum(4, 5));
+    //   // console.log(newSum(4, 5));
+    //   // can add three num at same function((4 + 5) + 7)
+    // let sumThreeNumbers = function(num1, num2, num3,sumTwoNUmbers){
+    //   let sum1 = sumTwoNUmbers(num1,num2);
+    //   return sumTwoNUmbers(sum1, num3);
+    // }
+    // console.log(sumThreeNumbers(4, 5, 6, sum));
+
+    //------------name no matters us as ref. (annonymos) next : arrow Functions
+
+      //2.. let sum = (num1, num2)=>{
+      //   return num1 + num2;
+      // }
+      // console.log(sum(6,8));
+
+    //3.. let square = num =>  num * num;    
+    // console.log(square(8));
+
+      // setTimeout(
+      //   () =>console.log('it is morning, wake up'), 5000),
+      // console.log('Alarm Set!');
+      let alarm = () => console.log(`it is morning, wake up${new Date()}`);
+      // let timerId = setTimeout(alarm, 1000);
+      // console.log(`Alaram set with timerID: ${timerId}`);
+      // clearTimeout(timerId);
+      let intervalId=setInterval(alarm, 1000);
+      setTimeout(() => clearInterval(intervalId), 5000);
+      
+  </script>
+</body> 
+</html>
