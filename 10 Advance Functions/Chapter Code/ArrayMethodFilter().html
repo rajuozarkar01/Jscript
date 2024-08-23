@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+ </head>
+<body>
+  <h4>arr.filter()=to create a new array containing only the elements that meet a specific condition</h4>
+  <ul>
+    <li>What is filter()?</li>
+    <li>The filter() method creates a new array by iterating over the existing elements of an array and returning only those that satisfy a given condition.</li>
+    <li>It doesn’t modify the original array; instead, it produces a filtered copy.</li>
+    <li>const newArray = originalArray.filter(callbackFunction);</li>
+    <li>callbackFunction: A function that defines the condition for filtering. It takes three arguments:</li>
+    <li>currentValue: The value of the current element being processed.</li>
+    <li>index (optional): The index of the current element.</li>
+    <li>arr (optional): The original array.</li>
+  </ul>
+  <script>
+    let arr = [1,2,3,4,5,6,7,8,9];
+    let odds = arr.filter((num,index ) =>{
+      // if(num % 2 === 1){
+        return num % 2 === 1; //true;
+      // }else {
+      //   return false;
+      // }
+    });
+    console.log(odds);
+    // let newOdds = arr.filter(num, index)
+
+    //-------eg..2
+//     const people = [
+//     { name: "Alice", age: 30 },
+//     { name: "Bob", age: 25 },
+//     { name: "Charlie", age: 40 }
+// ];
+// const adults = people.filter((person) => person.age >= 30);
+// console.log(adults);
+  </script>
+</body>
+</html>

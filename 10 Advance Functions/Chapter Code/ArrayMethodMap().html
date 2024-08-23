@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h4>What is map()?</h4>
+  <ul>
+    <li>The map() method creates a fresh array by iterating over the elements of an existing array and applying a provided callback function to each element.</li>
+    <li>It doesn’t modify the original array; instead, it constructs a new one based on the results of the callback function.</li>
+    <li>const newArray = originalArray.map(callbackFunction);</li>
+  </ul>
+    <ol>
+      <li>originalArray: The array you want to transform.</li>
+      <li>callbackFunction: A function that defines how each element should be transformed. It takes three arguments:</li>
+      <li>currentValue: The value of the current element being processed.</li>
+      <li>index (optional): The index of the current element.</li>
+      <li>array (optional): The original array.</li>
+    </ol>
+    <ul><li>Beware of parseInt() with map():</li></ul>
+ 
+  <script>
+    let  arr = [1, 2, 3, 4, 5];
+    let square=arr.map((num)=>{
+      return num * num
+    });
+    console.log(square)
+  </script>
+</body>
+</html>
