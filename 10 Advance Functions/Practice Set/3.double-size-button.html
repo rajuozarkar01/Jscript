@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    .btn-subscribe{
+      font-size: 15px;
+      height: 20px;
+      width: 80px;
+      background-color: brown;
+      color: white;
+      border: none;
+      border-radius: 8%;
+      box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    }
+    .js-size-duble{
+      font-size: 30px;
+      height: 40px;
+      width: 160px;
+    }
+  </style>
+</head>
+<body>
+  <h4>Q3. Create a button which should grow double in size on clicking afer 2 seconds? </h4>
+  <button class = "btn-subscribe" onclick="setTimeout(doubleTheSize,2000);">Click Me</button> 
+  <!-- no brackets to doubleTheSize because it will called by setTimeout -->
+  <script>
+    function doubleTheSize() {
+    let buttonElement = document.querySelector('.btn-subscribe')
+    buttonElement.classList.add('js-size-duble');
+    //whenever button clicked first find buttonElment and add class 
+   }
+  </script>
+
+</body>
+</html>
