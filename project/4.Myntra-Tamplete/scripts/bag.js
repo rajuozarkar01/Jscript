@@ -15,13 +15,14 @@ function displayBagSummary() {
   let totalMRP = 0;
   let totalDiscount = 0;
   
-  
-  bagItemObjects.forEach(bagItem => {
+    bagItemObjects.forEach(bagItem => {
     totalMRP += bagItem.original_price;
     totalDiscount += bagItem.original_price - bagItem.current_price;
+    
   });
 
   let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEE;
+
 
   bagSummaryElement.innerHTML = `        
     <div class="bag-details-container">
@@ -45,6 +46,7 @@ function displayBagSummary() {
       <span class="price-item-value">₹ ${finalPayment}</span>
     </div>
   </div>`
+
 }
 
 function loadBagItemObjects() {
@@ -74,6 +76,7 @@ function removeFromBag(itemId){
   loadBagItemObjects();
   displayBagIcon();
   displayBagItems();
+  displayBagSummary()   //updated cart price after removal of item.
 }
 
 function generateItemHtml(item){
