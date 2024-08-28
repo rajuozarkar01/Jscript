@@ -4,8 +4,17 @@ body {
   width: 30%;
 }
 
-#main-heading {
+.header{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: rgb(ff, ff, ff);
+  width: 80%;
+  align-items: center;
+  text-wrap: nowrap;
   text-align: center;
+}
+.todo_logo {
+  height: 45px;
 }
 
 .grid-container {
